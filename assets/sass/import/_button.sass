@@ -1,0 +1,270 @@
+.btn
+  display: inline-block
+  border: 2px solid transparent
+  letter-spacing: .5px
+  line-height: inherit
+  border-radius: 0
+  text-transform: uppercase
+  width: auto
+  @include alt-font
+  font-weight: 600
+  transition-duration: 0.3s
+  transition-timing-function: ease-in-out
+
+  &.btn
+    &-very-small
+      font-size: 9px
+      padding: 1px 17px
+      line-height: 22px
+    &-small
+      font-size: 11px
+      padding: 4px 24px
+    &-medium
+      font-size: 12px
+      padding: 6px 25px 5px
+    &-large
+      font-size: 13px
+      padding: 9px 34px
+      line-height: 25px
+    &-extra-large
+      font-size: 15px
+      padding: 12px 40px 13px
+      line-height: 25px
+
+  &-dual .btn
+    margin: 0 10px
+
+  i
+    margin-left: 6px
+    vertical-align: middle
+    position: relative
+    top: -1px
+
+/* button background */
+.btn
+  &.btn
+    &-white
+      background: $white
+      border-color: $white
+      color: $black-1
+
+      &:hover, &:focus
+        background: transparent
+        color: $white
+
+    &-black
+      background: $black
+      border-color: $black
+      color: $white
+
+      &:hover, &:focus
+        background: transparent
+        color: $black
+
+    &-dark-gray
+      background: $black-1
+      border-color: $black-1
+      color: $white
+
+      &:hover, &:focus
+        background: transparent
+        color: $black
+
+    &-ligh-gray
+      background: $gray-5
+      border-color: $gray-5
+      color: $black
+
+      &:hover, &:focus
+        background: transparent
+        border-color: $gray-5
+        color: $gray-5
+
+    &-deep-pink
+      background: $red-5
+      border-color: $red-5
+      color: $black
+
+      &:hover, &:focus
+        background: transparent
+        border-color: $red-5
+        color: $red-5
+
+    &-theme-1
+      background: $bg-theme-color-1
+      border-color: $bg-theme-color-1
+      color: $black
+
+      &:hover, &:focus
+        background: transparent
+        border-color: $bg-theme-color-1
+        color: $bg-theme-color-1
+
+    &-theme-2
+      background: $bg-theme-color-2
+      border-color: $bg-theme-color-2
+      color: $black
+
+      &:hover, &:focus
+        background: transparent
+        border-color: $bg-theme-color-2
+        color: $bg-theme-color-2
+
+    &-bg-theme-3
+      background: $bg-theme-color-3
+      border-color: $bg-theme-color-3
+      color: $black
+
+      &:hover, &:focus
+        background: transparent
+        border-color: $bg-theme-color-3
+        color: $bg-theme-color-3
+
+    &-bg-theme-4
+      background: $bg-theme-color-4
+      border-color: $bg-theme-color-4
+      color: $black
+
+      &:hover, &:focus
+        background: transparent
+        border-color: $bg-theme-color-4
+        color: $bg-theme-color-4
+
+    &-bg-theme-5
+      background: $bg-theme-color-5
+      border-color: $bg-theme-color-5
+      color: $black
+
+      &:hover, &:focus
+        background: transparent
+        border-color: $bg-theme-color-5
+        color: $bg-theme-color-5
+/* button transparent */
+.btn
+  &.btn
+    &-transparent-white
+      background: transparent
+      border-color: $white
+      color: $white
+
+      &:hover, &:focus
+        background: $white
+        border-color: $white
+        color: $black-1
+
+    &-transparent-black
+      background: transparent
+      border-color: $black
+      color: $black
+
+      &:hover, &:focus
+        background: $black
+        border-color: $black
+        color: $white
+
+    &-transparent-dark-gray
+      background: transparent
+      border-color: $black-1
+      color: $black-1
+
+      &:hover, &:focus
+        background: $black-1
+        border-color: $black-1
+        color: $white
+
+    &-transparent-light-gray
+      background: transparent
+      border-color: $white-1
+      color: $white-1
+
+      &:hover, &:focus
+        background: $white-1
+        border-color: $white-1
+        color: $black-1
+
+    &-transparent-deep-pink
+      background: transparent
+      border-color: $red-5
+      color: $red-5
+
+      &:hover, &:focus
+        background: $red-5
+        border-color: $red-5
+        color: #fff
+/* button rounded */
+
+.btn
+  &.btn
+    &-rounded
+      border-radius: 50px
+      &.btn-very-small
+        padding: 2px 23px 1px
+      &.btn-small
+        padding: 5px 29px
+      &.btn-medium
+        padding: 6px 32px
+      &.btn-large
+        padding: 9px 38px
+      &.btn-extra-large
+        padding: 12px 45px 13px
+
+
+
+/* image button */
+
+.image-button
+  width: 100%
+  background: rgba(0, 0, 0, 0.80)
+  padding: 26px
+  @include main-font
+  font-size: 16px
+
+  &:hover
+    background: $black-opacity-5
+
+.tag-cloud
+  a
+    font-size: 10px
+    padding: 3px 8px
+    border: 1px solid $white-1
+    margin: 0 8px 8px 0
+    display: inline-block
+    text-transform: uppercase
+    color: $black-1
+    line-height: 18px
+
+    &:hover
+      background: $black-1
+      color: $white !important
+      border: 1px solid $black-1
+
+/* dropdown style 1 */
+
+.dropdown-style-1
+  .btn
+    color: #fff
+    font-size: 11px
+    padding: 0
+    margin: 0
+    background: transparent
+    border: none
+    font-weight: normal
+
+    &:hover, &:focus
+      color: $red-5
+
+  .dropdown-menu
+    margin-top: 2px
+    min-width: 130px
+    border-radius: 0
+    border: none
+    z-index: 444
+    right: 0
+    left: auto
+
+    &>li>a
+      padding: 6px 15px
+      font-size: 12px
+
+      &:hover, &:focus
+        background: $white-1

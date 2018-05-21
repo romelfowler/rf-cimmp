@@ -1,0 +1,97 @@
+/* mixin */
+
+
+
+@mixin animation-name($var)
+  -webkit-animation-name: $var
+  -moz-animation-name: $var
+  -o-animation-name: $var
+  -ms-animation-name: $var
+  animation-name: $var
+
+@mixin animation-duration($var)
+  -webkit-animation-duration: .4s
+  -moz-animation-duration: .4s
+  -ms-animation-duration: .4s
+  -o-animation-duration: .4s
+  animation-duration: .4s
+
+@mixin animation-fill-mode($var)
+  -webkit-animation-fill-mode: $var
+  -moz-animation-fill-mode: $var
+  -ms-animation-fill-mode: $var
+  -o-animation-fill-mode: $var
+  animation-fill-mode: $var
+
+@mixin backface-visibility($var)
+  webkit-backface-visibility: $var
+  -moz-backface-visibility: $var
+  -ms-backface-visibility: $var
+
+@mixin filter($var)
+  -webkit-filter: $var
+  -moz-filter: $var
+  -ms-filter: $var
+  -o-filter: $var
+
+@mixin font-size-weight
+  font-weight: 400
+  font-size: 14px
+
+@mixin transform($var)
+  -webkit-transform: $var
+  -moz-transform: $var
+  -ms-transform: $var
+  -o-transform: $var
+  transform: $var
+
+@mixin transformScale($var)
+  -webkit-transform: scale($var)
+  -moz-transform: scale($var)
+  -ms-transform: scale($var)
+  -o-transform: scale($var)
+  transform: scale($var)
+
+@mixin transformY($translateY)
+  -webkit-transform: translateY($translateY)
+  -moz-transform: translateY($translateY)
+  -ms-transform: translateY($translateY)
+  -o-transform: translateY($translateY)
+  transform: translateY($translateY)
+
+@mixin transformXY($translateX, $translateY)
+  -webkit-transform: translateX($translateX) translateY( $translateY)
+  -moz-transform: translateX($translateX) translateY( $translateY)
+  -ms-transform: translateX($translateX) translateY( $translateY)
+  -o-transform: translateX($translateX) translateY( $translateY)
+  transform: translateX($translateX) translateY( $translateY)
+
+@mixin transition($var)
+  -webkit-transition: $var
+  -moz-transition: $var
+  -ms-transition: $var
+  -o-transition: $var
+  transition: $var
+
+@mixin transition-duration($var)
+  transition-duration: $var
+  -moz-transition-duration: $var
+  -webkit-transition-duration: $var
+  -o-transition-duration: $var
+  -ms-transition-duration: $var
+
+@mixin transition-timing-function($var)
+  transition-timing-function: $var
+  -moz-transition-timing-function: $var
+  -webkit-transition-timing-function: $var
+  -o-transition-timing-function: $var
+  -ms-transition-timing-function: $var
+
+
+
+@mixin opacity-parameter
+  position: absolute
+  height: 100%
+  width: 100%
+  top: 0
+  left: 0

@@ -1,0 +1,176 @@
+// Magnific Popup
+
+.mfp
+  &-bg
+    background: $black
+    opacity: 0.93
+
+  &-bg, &-wrap
+    z-index: 10007
+
+#popup-form
+  cursor: default
+
+.mfp-image-holder .mfp-close, .mfp-iframe-holder .mfp-close
+  color: $white
+  background: transparent
+
+.mfp-close, .mfp-close:active
+  opacity: 1
+  background-color: transparent
+  color: $white
+  right: 30px
+  top: 30px
+
+.modal-popup-main .mfp-close, .modal-popup-main .mfp-close:active
+  right: 0
+  top: 0
+
+.lightbox-gallery
+  a
+    position: relative
+    display: block
+
+  & .gallary-over-layer
+    position: absolute
+    top: 0
+    left: 0
+
+.mfp-arrow
+  &-right:after, &-left:after
+    display: none
+
+  &-right:before
+    border-left: none
+    content: "\e628"
+    font-size: 2em
+    font-family: 'themify'
+    color: $white
+
+  &-left:before
+    border-right: none
+    content: "\e629"
+    font-size: 2em
+    font-family: 'themify'
+    color: $white
+
+.mfp
+  &-bottom-bar
+    margin-top: -24px
+    font-size: 12px
+
+  &-close
+    font-size: 36px
+    @include alt-font
+    font-weight: 500
+
+
+.mfp-figure
+  @include animation-name(fadeIn)
+  @include animation-duration(.4s)
+  @include animation-fill-mode(both)
+  @include backface-visibility(hidden)
+
+/* start state */
+
+.my-mfp-zoom-in .zoom-anim-dialog
+  opacity: 0
+  @include transition(all 0.3s ease-in-out)
+  @include transform(scale(0.8))
+
+
+/* animate in */
+
+.my-mfp-zoom-in.mfp-ready .zoom-anim-dialog
+  opacity: 1
+  @include transform(scale(1))
+
+/* animate out */
+
+.my-mfp-zoom-in.mfp-removing .zoom-anim-dialog
+  @include transform(scale(0.8))
+  opacity: 0
+
+/* dark overlay, start state */
+
+.my-mfp-zoom-in.mfp-bg
+  opacity: 0
+  @include transition(opacity 0.3s ease-out)
+
+/* animate in */
+
+.my-mfp-zoom-in.mfp-ready.mfp-bg
+  opacity: 0.8
+
+/* animate out */
+
+.my-mfp-zoom-in.mfp-removing.mfp-bg
+  opacity: 0
+
+/* fade move animation for second dialog */
+
+.my-mfp-slide-bottom .zoom-anim-dialog
+  opacity: 0
+  @include transition(all 0.3s ease-out)
+  @include transform(translateY(-20px) perspective(600px) rotateX(10deg))
+
+
+/* animate in */
+
+.my-mfp-slide-bottom.mfp-ready .zoom-anim-dialog
+  opacity: 1
+  @include transform(translateY(0) perspective(600px) rotateX(0))
+
+/* animate out */
+
+.my-mfp-slide-bottom.mfp-removing .zoom-anim-dialog
+  opacity: 0
+  @include transform(translateY(-10px) perspective(600px) rotateX(10deg))
+
+/* dark overlay, start state */
+
+.my-mfp-slide-bottom.mfp-bg
+  opacity: 0
+  @include transition(opacity 0.3s ease-out)
+
+/* animate in */
+
+.my-mfp-slide-bottom.mfp-ready.mfp-bg
+  opacity: 0.8
+
+/* animate out */
+
+.my-mfp-slide-bottom.mfp-removing.mfp-bg
+  opacity: 0
+
+/* simple fade transition */
+
+.mfp-fade
+  &.mfp-bg
+    opacity: 0
+    @include transition(all 0.3s ease-out)
+  &.mfp-bg.mfp-ready
+    opacity: 0.97
+  &.mfp-bg.mfp-removing
+    opacity: 0
+  &.mfp-wrap .mfp-content
+    opacity: 0
+    @include transition(all 0.3s ease-out)
+  &.mfp-wrap.mfp-ready .mfp-content
+    opacity: 1
+  &.mfp-wrap.mfp-removing .mfp-content
+    opacity: 0
+
+/* grid */
+
+.show-grid [class^="col-"]
+  background-color: $gray-4
+  border: 1px solid $black-opacity-2
+  margin-bottom: 15px
+  padding: 10px 0
+  text-align: center
+
+/* message box */
+
+.alert-dismissable .close, .alert-dismissible .close
+  top: 0
