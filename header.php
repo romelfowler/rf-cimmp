@@ -42,10 +42,10 @@
 	  gtag('js', new Date());
 
 	  gtag('config', 'AW-965946839');
-	</script> -->
+	</script>
 	<!--[if IE]>
 			<script src="/assets/js/html5shiv.js"></script>
-	<![endif]
+	<![endif] -->
 	<?php wp_head(); ?>
 </head>
 
