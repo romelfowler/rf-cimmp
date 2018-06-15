@@ -1,7 +1,7 @@
 <?php // HOME PAGE - PROCESS SECTION
 $process_title = get_field('process_title'); ?>
 <!-- start fancy text box style 03 section -->
-<section id="process" class="wow fadeInUp animated color-code no-padding-top md-no-background-img xs-padding-50px-tb margin-100px-bottom parallax" data-color="11" style="background: url('/wp-content/themes/cimmp-v2/assets/images/ico/back-image4.png') left bottom no-repeat ">
+<section id="process" class="wow fadeInUp animated color-code no-padding-top md-no-background-img xs-padding-50px-tb margin-100px-bottom parallax" data-color="11" style="background: url('http://cimmp.com/wp-content/uploads/2018/06/1.png')  no-repeat -10% 108% / 40%;  ">
 
 <div class="container">
   <div class="row">

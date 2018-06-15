@@ -11,7 +11,7 @@
 
 <section class="no-results not-found">
 	<header class="page-header">
-		<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'cimmp-v2' ); ?></h1>
+		<h1 class="page-title"><?php esc_html_e( 'Sorry but I could not find what you are looking for.', 'cimmp-v2' ); ?></h1>
 	</header><!-- .page-header -->
 
 	<div class="page-content">

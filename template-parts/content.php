@@ -8,6 +8,11 @@
  */
 
 ?>
+<style media="screen">
+	.widgettitle {
+		display: none;
+	}
+</style>
 <!-- start page title section -->
 <section class="wow fadeIn bg-light-gray padding-35px-tb page-title-small top-space">
 
@@ -57,7 +62,11 @@
 						<main class="col-md-9 col-sm-12 col-xs-12 right-sidebar sm-margin-60px-bottom xs-margin-40px-bottom no-padding-left sm-no-padding-right">
 								<div class="col-md-12 col-sm-12 col-xs-12 blog-details-text last-paragraph-no-margin">
 									<?php if (has_post_thumbnail()) : the_post_thumbnail(); endif; ?>
-									<?php the_content();  ?>
+
+									<div class="margin-10px-top">
+
+									<?php the_content();  ?>									</div>
+
 								</div>
 
 								<div class="col-md-12 col-sm-12 col-xs-12 margin-seven-bottom margin-eight-top">
@@ -65,14 +74,14 @@
 								</div>
 								<div class="col-md-6 col-sm-12 col-xs-12 sm-text-center">
 										<div class="tag-cloud margin-20px-bottom">
-											<?php the_tags(' ', ',' , ''); ?>
+											<?php the_tags(' ', ',' , ' '); ?>
 
 										</div>
 								</div>
 								<div class="col-md-6 col-sm-12 col-xs-12 text-right sm-text-center">
 										<div class="social-icon-style-6">
 												<ul class="extra-small-icon">
-													<li><a class="likes-count" href="#" target="_blank"><i class="fa fa-heart text-deep-pink"></i><span class="text-small">300</span></a></li>
+													<!-- <li><a class="likes-count" href="#" target="_blank"><i class="fa fa-heart text-deep-pink"></i><span class="text-small">300</span></a></li> -->
 													<?php $cptui_social_medias = new WP_Query( array( 'post_type' => 'social_medias', 'posts_per_page' => 5, 'orderby' => 'post_id', 'order' => 'ASC') ); ?>
 													<?php if($cptui_social_medias->have_posts()): while ( $cptui_social_medias->have_posts() ) : $cptui_social_medias->the_post();?>
 														<li><a class="<?php the_field('social_icon') ?>" href="<?php the_field('social_media_link'); ?>" target="_blank"><i class="fa fa-<?php the_field('social_icon') ?>"></i></a></li>
@@ -80,24 +89,27 @@
 												</ul>
 										</div>
 								</div>
-								<div class="col-md-12 col-sm-12 col-xs-12 margin-30px-top">
-										<div class="display-table width-100 border-all border-color-extra-light-gray padding-50px-all sm-padding-30px-all xs-padding-20px-all">
-								<?//php $cptui_employee_prof = new WP_Query( array('author'=> get_current_user_id(), 'post_type' => 'employee_profiles', 'posts_per_page' => 1, 'orderby' => 'post_id', 'order' => 'ASC') ); ?>
-								<?//php if($cptui_employee_prof->have_posts()): while ( $cptui_employee_prof->have_posts() ) : $cptui_employee_prof->the_post();?>
-									<div class="display-table-cell width-130px text-center vertical-align-top xs-margin-15px-bottom xs-width-100 xs-display-block xs-text-center">
-										<?//php $featured_img_url = get_the_post_thumbnail_url(get_the_ID(), 'full'); echo '<a href="'.esc_url($featured_img_url).'" rel="lightbox">'; the_post_thumbnail('thumbnail',array('class'=>'img-circle width-100px')); echo '</a>'; ?>
-									</div>
 
-									<div class="padding-40px-left display-table-cell vertical-align-top last-paragraph-no-margin xs-no-padding-left xs-display-block xs-text-center">
-											<a href="#" class="text-extra-dark-gray text-uppercase alt-font font-weight-600 margin-10px-bottom display-inline-block text-small"><?//php the_author(); ?></a>
-											<p class="margin-20px-bottom text-small"><?//php the_excerpt(); ?></p>
-									</div>
-								<?//php endwhile; endif; ?>
 
-										</div>
-								</div>
 
 <!--
+
+<div class="col-md-12 col-sm-12 col-xs-12 margin-30px-top">
+		<div class="display-table width-100 border-all border-color-extra-light-gray padding-50px-all sm-padding-30px-all xs-padding-20px-all">
+<?//php $cptui_employee_prof = new WP_Query( array('author'=> get_current_user_id(), 'post_type' => 'employee_profiles', 'posts_per_page' => 1, 'orderby' => 'post_id', 'order' => 'ASC') ); ?>
+<?//php if($cptui_employee_prof->have_posts()): while ( $cptui_employee_prof->have_posts() ) : $cptui_employee_prof->the_post();?>
+	<div class="display-table-cell width-130px text-center vertical-align-top xs-margin-15px-bottom xs-width-100 xs-display-block xs-text-center">
+		<?//php $featured_img_url = get_the_post_thumbnail_url(get_the_ID(), 'full'); echo '<a href="'.esc_url($featured_img_url).'" rel="lightbox">'; the_post_thumbnail('thumbnail',array('class'=>'img-circle width-100px')); echo '</a>'; ?>
+	</div>
+
+	<div class="padding-40px-left display-table-cell vertical-align-top last-paragraph-no-margin xs-no-padding-left xs-display-block xs-text-center">
+			<a href="#" class="text-extra-dark-gray text-uppercase alt-font font-weight-600 margin-10px-bottom display-inline-block text-small"><?//php the_author(); ?></a>
+			<p class="margin-20px-bottom text-small"><?//php the_excerpt(); ?></p>
+	</div>
+<?//php endwhile; endif; ?>
+
+		</div>
+</div>
 								<div class="col-md-12 col-sm-12 col-xs-12 margin-eight-top">
 										<div class="divider-full bg-medium-light-gray"></div>
 								</div>
@@ -154,7 +166,7 @@
 								<div class="col-md-12 col-sm-12 col-xs-12 margin-eight-top" id="comments">
 										<div class="divider-full bg-medium-light-gray"></div>
 								</div> -->
-								<div class="col-md-12 col-sm-12 col-xs-12 margin-lr-auto text-center margin-80px-tb sm-margin-50px-tb xs-margin-30px-tb">
+								<!-- <div class="col-md-12 col-sm-12 col-xs-12 margin-lr-auto text-center margin-80px-tb sm-margin-50px-tb xs-margin-30px-tb">
 										<div class="position-relative overflow-hidden width-100">
 												<span class="text-small text-outside-line-full alt-font font-weight-600 text-uppercase text-extra-dark-gray">Write A Comments</span>
 										</div>
@@ -173,15 +185,13 @@
 								</div>
 								<div class="col-md-12 col-sm-12 col-xs-12 text-center">
 										<button class="btn btn-dark-gray btn-small margin-15px-top" type="submit">Send message</button>
-								</div>
+								</div> -->
 						</main>
 						<aside class="col-md-3 col-sm-12 col-xs-12 pull-right">
 								<div class="display-inline-block width-100 margin-45px-bottom xs-margin-25px-bottom">
 										<form >
 												<div class="position-relative">
 														<input type="text" value="<?php the_search_query(); ?>" class="bg-transparent text-small no-margin border-color-extra-light-gray medium-input pull-left" placeholder="Enter your keywords...">
-
-
 														<button type="submit" class="bg-transparent  btn position-absolute right-0 top-1"><i class="fa fa-search no-margin-left"></i></button>
 												</div>
 										</form>
@@ -214,6 +224,7 @@
 
 										</ul>
 								</div>
+
 
 								<div class="margin-45px-bottom xs-margin-25px-bottom">
 										<div class="text-extra-dark-gray margin-25px-bottom alt-font text-uppercase font-weight-600 text-small aside-title"><span>tags cloud</span></div>

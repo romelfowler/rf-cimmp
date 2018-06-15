@@ -1,4 +1,4 @@
-<section class="wow fadeIn color-code no-padding xs-padding-50px-tb" data-color="6" style="background: url('/wp-content/themes/cimmp-v2/assets/images/ico/coffee-right.png') right bottom no-repeat">
+<section class="wow fadeIn color-code no-padding xs-padding-50px-tb parallax" data-color="6" style="background: url('http://cimmp.com/wp-content/uploads/2018/06/3.png') 140% 0% /50% no-repeat">
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-9 col-sm-10 col-xs-12 center-col text-center margin-100px-top">

@@ -137,6 +137,19 @@ function cimmp_v2_widgets_init() {
 	) );
 }
 add_action( 'widgets_init', 'cimmp_v2_widgets_init' );
+
+ // Async load
+ function vtdigger_async($url)
+ {
+     if ( strpos( $url, '#asyncload') === false )
+         return $url;
+     else if ( is_admin() )
+         return str_replace( '#asyncload', '', $url );
+     else
+   return str_replace( '#asyncload', '', $url )."' async='async";
+     }
+ add_filter( 'clean_url', 'vtdigger_async', 11, 1 );
+
 /**
  * Enqueue scripts and styles.
  */

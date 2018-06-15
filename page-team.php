@@ -50,6 +50,7 @@ get_header();
                                     <span class="text-white text-small display-inline-block no-margin"><?php the_excerpt(); ?></span>
                                     <div class="separator-line-horrizontal-full bg-deep-pink margin-eleven-tb"></div>
                                     <?php if(have_rows('cptui_social_media_box')):while(have_rows('cptui_social_media_box') ) : the_row(); ?>
+                                    <a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>" target="_blank"><i class="text-white fa fa-user"></i></a>
                                     <a href="<?php the_sub_field('cptui_social_media_link'); ?>" class="text-white" target="_blank"><i class="fa fa-<?php the_sub_field('cptui_social_media_icon')?>"></i></a>
                                   <?php endwhile; endif;?>
                                 </div>
