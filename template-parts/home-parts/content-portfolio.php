@@ -1,4 +1,4 @@
-<section class="wow fadeIn color-code no-padding xs-padding-50px-tb parallax" data-color="6" style="background: url('http://cimmp.com/wp-content/uploads/2018/06/3.png') 140% 0% /50% no-repeat">
+<section class="wow fadeIn color-code no-padding xs-padding-50px-tb parallax" data-color="6" style="background: url('http://cimmp.com/wp-content/uploads/2018/06/3.png') 140% 0% /50% no-repeat; height: 80vh;" >
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-9 col-sm-10 col-xs-12 center-col text-center margin-100px-top">
@@ -9,7 +9,7 @@
             <div class="filter-content overflow-hidden padding-100px-lr sm-no-padding-lr xs-padding-15px-lr">
                 <ul class="portfolio-grid work-5col hover-option8 gutter-medium">
                     <li class="grid-sizer"></li>
-                    <?php $postQuery = new WP_Query( array( 'post_type' => 'folio', 'posts_per_page'=>'5','orderby' => 'post_id', 'order' => 'DESC' ) );
+                    <?php $postQuery = new WP_Query( array( 'post_type' => 'folio', 'posts_per_page'=>'10','orderby' => 'post_id', 'order' => 'DESC' ) );
                           if($postQuery->have_posts() ) : while($postQuery->have_posts() ) : $postQuery->the_post();
                           $grid_item_size = get_field('grid_item_size');
                           $grid_item_delay = get_field('grid_item_delay');

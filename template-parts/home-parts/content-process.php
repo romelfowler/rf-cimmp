@@ -1,7 +1,7 @@
 <?php // HOME PAGE - PROCESS SECTION
 $process_title = get_field('process_title'); ?>
 <!-- start fancy text box style 03 section -->
-<section id="process" class="wow fadeInUp animated color-code no-padding-top md-no-background-img xs-padding-50px-tb margin-100px-bottom parallax" data-color="11" style="background: url('http://cimmp.com/wp-content/uploads/2018/06/1.png')  no-repeat -10% 108% / 40%;  ">
+<section id="process" class="wow fadeInUp animated color-code no-padding-top md-no-background-img xs-padding-50px-tb margin-100px-bottom parallax" data-color="11" style="background: url('http://cimmp.com/wp-content/uploads/2018/06/yellow.png')  no-repeat -10% 108% / 40%;  ">
 
 <div class="container">
   <div class="row">
@@ -19,7 +19,7 @@ $process_title = get_field('process_title'); ?>
 ?>
       <!-- feature box item-->
       <div class="col-md-4 col-sm-4 col-xs-12 xs-margin-five-bottom last-paragraph-no-margin wow fadeInUp">
-          <div class="feature-box">
+          <div class="feature-box" style="background:#FFF">
               <div class="content">
                 <?php if(!empty($process_img) ): ?>
                   <img class="margin-25px-bottom sm-margin-15px-bottom width-50" src="<?php echo $process_img[url]; ?>" alt=" <?php echo $process_img[alt]; ?> ">

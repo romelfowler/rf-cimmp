@@ -20,13 +20,14 @@ get_header();
                     <li class="nav"><a href="javascript:void(0);" data-filter=".digital" class="xs-display-inline light-gray-text-link text-very-small">Digital</a></li>
                     <li class="nav"><a href="javascript:void(0);" data-filter=".logo" class="xs-display-inline light-gray-text-link text-very-small">Logo</a></li>
                     <li class="nav"><a href="javascript:void(0);" data-filter=".print" class="xs-display-inline light-gray-text-link text-very-small">Print</a></li>
+
                 </ul>
                 <!-- end filter navigation -->
             </div>
         </div>
     </div>
     <?php get_template_part( 'template-parts/folio-parts/content', 'folio' ); ?>
-  
+
 </section>
 <!-- end portfolio section -->
 
