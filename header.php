@@ -19,7 +19,7 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1" />
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<meta name="author" content="Rommel Fowler">
-
+	<link rel="shortcut icon" href="<?php bloginfo('template_directory');?>/assets/images/logo/logo.png">
 	<!-- description -->
 	<meta name="description" content="CIM Marketing Partners (CIMMP) is a highly creative, modern, and relavent web agency. Located in Las Vegas, Nevada, CIMMP continues to provide great service through developing brand modules for businesses. ">
 	<!-- keywords -->

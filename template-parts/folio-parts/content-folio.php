@@ -1,4 +1,4 @@
-<div class="container-fluid">
+ <div class="container-fluid">
     <div class="row">
         <div class="col-md-12 no-padding-lr xs-padding-15px-lr">
             <div class="filter-content overflow-hidden">
