@@ -32,7 +32,7 @@
                             <a class="text-extra-dark-gray text-bg-theme-color-1-hover  margin-10px-right" href="<?php the_field('social_media_link'); ?>" target="_blank"><i class="fa fa-<?php the_field('social_icon') ?> aria-hidden="true""></i></a>
                             <?php endwhile; endif; ?>
                           </div>
-                          <div class="right-bg "><img src="<?php bloginfo('stylesheet_directory')?>/assets/images/ico/NAV-text.png" alt="CIMMP"></div>
+                          <div class="right-bg "></div>
                       </div>
                   </div>
               </div>

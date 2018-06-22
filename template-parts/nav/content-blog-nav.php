@@ -23,10 +23,10 @@
                     <div class="header-searchbar">
                         <a href="#search-header" class="header-search-form text-white"><i class="fa fa-search search-button"></i></a>
                         <!-- search input-->
-                        <form id="search-header" role="search" method="get" action="<?php echo home_url('/'); ?>" name="search-header" class="mfp-hide search-form-result">
+                        <form id="search-header" method="post" action="search-result.html" name="search-header" class="mfp-hide search-form-result">
                             <div class="search-form position-relative">
                                 <button type="submit" class="fa fa-search close-search search-button"></button>
-                                <input type="text" name="s" value="<?php echo get_search_query() ?>" class="search-input" placeholder="Enter your keywords..." autocomplete="off">
+                                <input type="text" name="search" class="search-input" placeholder="Enter your keywords..." autocomplete="off">
                             </div>
                         </form>
                     </div>

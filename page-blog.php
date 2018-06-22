@@ -73,7 +73,7 @@ get_header();
 
             <div class="container">
                 <div class=" row col-4-nth sm-col-2-nth  margin-80px-top">
-                  <?php $post = array( 'post_type' => 'post', 'orderby' => 'post_id', 'order' => 'DESC' );
+                  <?php $post = array( 'post_type' => 'post', 'orderby' => 'post_id', 'order' => 'DESC');
                         $postQuery = new WP_Query($post);
                         if($postQuery->have_posts() ) : while($postQuery->have_posts() ) : $postQuery->the_post();
                         $author = get_field('author_name');

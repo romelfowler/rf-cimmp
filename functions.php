@@ -171,9 +171,10 @@ function cimmp_v2_scripts() {
 	wp_enqueue_style( 'navigation', get_stylesheet_directory_uri() . '/assets/revolution/css/navigation.css');
 	// bootsnav
 	wp_enqueue_style( 'bootsnav', get_stylesheet_directory_uri() . '/assets/css/bootsnav.css');
-	wp_enqueue_style( 'cimmp-v2-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'cimmp-v2-style', get_stylesheet_uri(), array(), filemtime( get_stylesheet_directory() . '/style.css')  );
 	wp_enqueue_style( 'responsive-style', get_stylesheet_directory_uri() . '/assets/css/responsive.css');
 	// ALL JS FROM THIS IntlCodePointBreakIterator
+	
 	wp_enqueue_script( 'cimmp-v2-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 	wp_enqueue_script( 'cimmp-v2-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 	wp_enqueue_script( 'JQuery-CDN', 'https://code.jquery.com/jquery-3.3.1.min.js', null, null, true );
