@@ -105,7 +105,7 @@
             <div class="row">
                 <!-- start copyright -->
                 <div class="col-md-6 col-sm-6 col-xs-12 text-left text-small xs-text-center"></div>
-                <div class="col-md-6 col-sm-6 col-xs-12 text-right text-small xs-text-center"> &COPY; 2018 All Rights Reserved by <a href="https://www.cimmp.com" target="_blank" title="CIMMP">CIM Marketing Partners.</a></div>
+                <div class="col-md-6 col-sm-6 col-xs-12 text-right text-small xs-text-center"> &COPY; <?php echo get_the_date('Y'); ?> All Rights Reserved by <a href="https://www.cimmp.com" target="_blank" title="CIMMP">CIM Marketing Partners.</a></div>
                 <!-- end copyright -->
             </div>
         </div>

@@ -38,8 +38,10 @@ get_header();
     <div class="container-fluid padding-seventeen-lr md-padding-ten-lr xs-padding-15px-lr">
         <div class="row">
             <!-- start team item -->
-              <?php $cptui_team_profiles = new WP_Query( array( 'post_type' => 'team_profiles', 'orderby' => 'post_id', 'order' => 'DESC') ); ?>
-              <?php if($cptui_team_profiles->have_posts()): while ( $cptui_team_profiles->have_posts() ) : $cptui_team_profiles->the_post();?>
+              <?php $cptui_team_profiles = new WP_Query( array( 'post_type' => 'team_profiles', 'orderby' => 'post_id', 'order' => 'DESC') );
+              if($cptui_team_profiles->have_posts()): while ( $cptui_team_profiles->have_posts() ) : $cptui_team_profiles->the_post();
+              $tags = get_the_tags( );
+              ?>
                 <div class="col-md-3 col-sm-6 col-xs-12 team-block text-left team-style-1 margin-40px-bottom sm-margin-seven-bottom xs-margin-30px-bottom ">
                 <figure>
                     <div class="team-image xs-width-100">
@@ -63,7 +65,8 @@ get_header();
                     <figcaption>
                         <div class="team-member-position margin-20px-top text-center">
                             <div class="text-small font-weight-500 text-extra-dark-gray text-uppercase"><?php the_title(); ?></div>
-                            <div class="text-extra-small text-uppercase text-medium-gray"><?php the_tags(' ', ',' , ''); ?></div>
+                            <div class="text-extra-small text-uppercase text-medium-gray">
+                              <?php if($tags): foreach ($tags as $tag) { echo $tag->name . ' '; } endif; ?></div>
                         </div>
                     </figcaption>
                 </figure>

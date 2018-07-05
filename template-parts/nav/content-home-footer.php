@@ -6,7 +6,7 @@
 						<!-- start copyright -->
 						<div class="col-md-3 col-sm-5 col-xs-12 text-small text-center alt-font display-table xs-text-center xs-margin-15px-bottom">
 								<div class="display-table-cell vertical-align-middle text-white">
-										&COPY; 2018 All Rights Reserved by <a href="https://www.cimmp.com" class="text-white text-bg-theme-color-2-hover" target="_blank" title="CIMMP">CIM Marketing Partners.</a>
+										&COPY; <?php echo get_the_date('Y'); ?> All Rights Reserved by <a href="https://www.cimmp.com" class="text-white text-bg-theme-color-2-hover" target="_blank" title="CIMMP">CIM Marketing Partners.</a>
 								</div>
 						</div>
 						<!-- end copyright -->
