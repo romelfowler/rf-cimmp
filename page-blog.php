@@ -45,7 +45,7 @@ get_header();
                                 </div>
                             </li>
                             <!-- start blog post item -->
-                          <?php endwhile; endif; ?>
+                          <?php endwhile; endif; wp_reset_query();?>
 
                             <!-- end blog post item -->
                         </ul>
@@ -73,7 +73,7 @@ get_header();
 
             <div class="container">
                 <div class=" row col-4-nth sm-col-2-nth  margin-80px-top">
-                  <?php $post = array( 'post_type' => 'post', 'orderby' => 'post_id', 'order' => 'DESC');
+                  <?php $post = array( 'post_type' => 'post', 'post_per_page'=>-1,'orderby' => 'date', 'order' => 'DESC');
                         $postQuery = new WP_Query($post);
                         if($postQuery->have_posts() ) : while($postQuery->have_posts() ) : $postQuery->the_post();
                         $author = get_field('author_name');
@@ -103,8 +103,8 @@ get_header();
                       </div>
 
                   <?php endwhile; else: ?>
-                      <h1>missing post</h1>
-                  <?php endif; ?>
+                      <h1>Our blog page is under construction. Please check back again later.</h1>
+                  <?php endif; wp_reset_query();?>
                     <!-- end post item -->
 
 

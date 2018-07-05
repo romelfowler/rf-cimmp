@@ -261,28 +261,28 @@ ul {
     -o-transition-duration: .2s
 }
 
-::selection {
+*::selection {
     color: #333;
     background: #d6d5d5
 }
 
-::-moz-selection {
+*::-moz-selection {
     color: #333;
     background: #d6d5d5
 }
 
-::-webkit-input-placeholder {
+*::-webkit-input-placeholder {
     color: #232323;
     text-overflow: ellipsis
 }
 
-::-moz-placeholder {
+*::-moz-placeholder {
     color: #FFF;
     text-overflow: ellipsis;
     opacity: 1
 }
 
-::-ms-input-placeholder {
+*::-ms-input-placeholder {
     color: #232323;
     text-overflow: ellipsis;
     opacity: 1
@@ -338,7 +338,10 @@ h6 {
     font-size: 25px;
     line-height: 30px
 }
-
+.fs-40px {
+  font-size: 40px; 
+line-height:1.3em;
+}
 .text-extra-small {
     font-size: 11px;
     line-height: 14px
@@ -687,7 +690,7 @@ a.text-very-light-gray-hover:hover {
 .letter-spacing-minus-10 {
     letter-spacing: -10px
 }
-.fs-40px {font-size: 40px;}
+
 .font-weight-100 {
     font-weight: 100
 }
@@ -824,7 +827,7 @@ a.text-very-light-gray-hover:hover {
     height: 1px;
     width: 99%;
     display: block;
-    border-bottom: 1px solid #8d897a;
+    border-bottom: 1px solid #8d8a79;
     right: 100%;
     margin-right: 25px;
     opacity: .15
@@ -837,7 +840,7 @@ a.text-very-light-gray-hover:hover {
     height: 1px;
     width: 99%;
     display: block;
-    border-bottom: 1px solid;
+    border-bottom: 1px solid #8d8a79;
     left: 100%;
     margin-left: 25px;
     opacity: .15
@@ -1247,10 +1250,6 @@ section.half-section {
     outline: 0;
     border: none;
     box-shadow: none
-}
-
-.no-margin p {
-    margin: 0!important
 }
 
 .input-group input,
@@ -13475,8 +13474,8 @@ header.sticky nav.navbar.brand-center ul.nav>li>a {
     outline: 0
 }
 
-.search-input [placeholder],
-.search-input::-moz-placeholder {
+.search-input::-moz-placeholder,
+.search-input [placeholder] {
     color: red
 }
 
@@ -13965,7 +13964,7 @@ header.sticky nav.navbar.brand-center ul.nav>li>a {
 
 .feature-box:hover:after,
 .feature-box:hover:before {
-    background: 0 0;
+    transform: scaleY(1);
     transition-duration: .5s;
     -webkit-transition-duration: .5s;
     -moz-transition-duration: .5s;
@@ -14023,7 +14022,7 @@ header.sticky nav.navbar.brand-center ul.nav>li>a {
 
 .feature-box:hover .content:after,
 .feature-box:hover .content:before {
-    background: 0 0;
+    transform: scaleX(1);
     -webkit-transform: scaleX(1);
     -moz-transform: scaleX(1);
     -ms-transform: scaleX(1);
@@ -16523,7 +16522,7 @@ aside .latest-post li figure {
     width: 35px;
     margin: 0 15px;
     height: 1px;
-    background: rgba(255, 255, 255, .2);
+    background: transparent;
     content: "";
     display: inline-block;
     vertical-align: super

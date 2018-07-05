@@ -10,7 +10,7 @@
                       <img src="<?php bloginfo('stylesheet_directory')?>/assets/images/logo-white.png" data-at2x="<?php bloginfo('stylesheet_directory')?>/images/logo-white@2x.png" alt="CIMMP" class="logo-light">
                     </a>
                 </div>
-                <div class="col-md-7 col-xs-2 width-auto pull-right accordion-menu xs-no-padding-right">
+                <!-- <div class="col-md-7 col-xs-2 width-auto pull-right accordion-menu xs-no-padding-right">
                     <button type="button" class="navbar-toggle collapsed pull-right" data-toggle="collapse" data-target="#navbar-collapse-toggle-1">
                         <span class="sr-only">toggle navigation</span>
                         <span class="icon-bar"></span>
@@ -18,7 +18,7 @@
                         <span class="icon-bar"></span>
                     </button>
 
-                </div>
+                </div> -->
                 <div class="col-md-2 col-xs-5 width-auto">
                     <div class="header-searchbar">
                         <a href="#search-header" class="header-search-form text-white"><i class="fa fa-search search-button"></i></a>
