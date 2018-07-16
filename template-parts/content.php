@@ -64,8 +64,8 @@
 									<?php if (has_post_thumbnail()) : the_post_thumbnail(); endif; ?>
 
 									<div class="margin-10px-top">
-										<?php the_content();  ?>									
-									</div>
+
+									<?php the_content();  ?>									</div>
 
 								</div>
 

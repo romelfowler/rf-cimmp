@@ -31,7 +31,8 @@ get_header();
                 <div class="slider-text-middle">
                     <div class="col-lg-7 col-md-10 col-sm-10 center-col text-center">
                         <?php
-                        echo '<h2 class="font-weight-600 text-white alt-font margin-40px-bottom xs-margin-25px-bottom xs-fs-50px" >' . $cta_title . '</h2>';
+                        echo '<span class="after-before-separator text-extra-small alt-font text-white letter-spacing-3 xs-letter-spacing-0 text-uppercase margin-20px-bottom xs-margin-5px-bottom display-inline-block"></span>',
+                        '<h2 class="font-weight-600 text-white alt-font margin-40px-bottom xs-margin-25px-bottom">' . $cta_title . '</h2>';
                         if($cta_feature_work_choice) : echo '<a href=" ' .$cta_feature_link . '" class="btn btn-transparent-white btn-rounded btn-medium text-link-white"> ' . $cta_featured_title_btn . ' </a>'; else : echo ""; endif;
                         ?>
                     </div>

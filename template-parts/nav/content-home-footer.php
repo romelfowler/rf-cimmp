@@ -1,24 +1,23 @@
-
 <!-- start footer -->
 <footer class="footer-center-logo padding-five-tb xs-padding-30px-tb">
 		<div class="container">
 				<div class="row equalize xs-equalize-auto">
 						<!-- start copyright -->
-						<div class="col-md-3 col-sm-5 col-xs-12 text-small text-center alt-font display-table xs-text-center xs-margin-15px-bottom">
+						<div class="col-md-3 col-sm-3 col-xs-12 text-small text-center alt-font display-table xs-text-center xs-margin-15px-bottom">
 								<div class="display-table-cell vertical-align-middle text-white">
-										&COPY; <?php echo get_the_date('Y'); ?> All Rights Reserved by <a href="https://www.cimmp.com" class="text-white text-bg-theme-color-2-hover" target="_blank" title="CIMMP">CIM Marketing Partners.</a>
+										&COPY; 2018 All Rights Reserved by <a href="https://www.cimmp.com" class="text-white text-bg-theme-color-2-hover" target="_blank" title="CIMMP">CIM Marketing Partners.</a>
 								</div>
 						</div>
 						<!-- end copyright -->
 						<!-- start logo -->
-						<div class="col-md-3 col-sm-2 col-xs-12 text-center display-table xs-margin-10px-bottom">
+						<div class="col-md-3 col-sm-3 col-xs-12 text-center display-table xs-margin-10px-bottom">
 								<div class="display-table-cell vertical-align-middle">
 										<a href="index.html"><img class=" width-150px" src="<?php bloginfo('stylesheet_directory')?>/assets/images/logo/logo-white.png" data-at2x="<?php bloginfo('stylesheet_directory')?>/assets/images/logo/logo-white@2x.png" alt="CIMMP-logo"></a>
 								</div>
 						</div>
 						<!-- end logo -->
 						<!-- start social media -->
-						<div class="col-md-3 col-sm-5 col-xs-12 text-center display-table xs-text-center">
+						<div class="col-md-3 col-sm-3 col-xs-12 text-center display-table xs-text-center">
 								<div class="display-table-cell vertical-align-middle text-white">
 										<span class="alt-font text-small margin-20px-right"></span>
 										<div class="social-icon-style-8 display-inline-block vertical-align-middle">
@@ -33,14 +32,13 @@
 								</div>
 						</div>
 						<!-- end social media -->
+						<div class="col-md-3 col-sm-3 col-xs-12 text-center display-table xs-text-center">
+							<div class="display-table-cell vertical-align-middle text-white">
+								<div class="g-partnersbadge" data-agency-id="5662576792"></div>
 
-						<!-- start google -logo -->
-						<div class="col-md-3 col-sm-2 col-xs-12 text-center display-table xs-margin-10px-bottom">
-								<div class="display-table-cell vertical-align-middle">
-									<div class="g-partnersbadge" data-agency-id="5662576792"></div>
-								</div>
+							</div>
 						</div>
-						<!-- end google -logo -->
+
 				</div>
 		</div>
 </footer>

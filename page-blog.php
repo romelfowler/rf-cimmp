@@ -45,7 +45,7 @@ get_header();
                                 </div>
                             </li>
                             <!-- start blog post item -->
-                          <?php endwhile; endif; wp_reset_query();?>
+                          <?php endwhile; endif; ?>
 
                             <!-- end blog post item -->
                         </ul>
@@ -55,11 +55,26 @@ get_header();
         </section>
         <!-- end blog section -->
     <section class="wow fadeIn no-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- start filter navigation -->
+                    <!-- <ul class="portfolio-filter nav nav-tabs border-none portfolio-filter-tab-1 font-weight-600 alt-font text-uppercase text-center margin-80px-top margin-80px-bottom text-small sm-margin-40px-bottom xs-margin-20px-bottom">
+                        <li class="nav active"><a href="javascript:void(0);" data-filter="*" class="xs-display-inline light-gray-text-link text-very-small">All</a></li>
+                        <li class="nav"><a href="javascript:void(0);" data-filter=".newsroom" class="xs-display-inline light-gray-text-link text-very-small">Newsroom</a></li>
+                        <li class="nav"><a href="javascript:void(0);" data-filter=".blog" class="xs-display-inline light-gray-text-link text-very-small">Blog</a></li>
 
+                    </ul> -->
+                    <!-- end filter navigation -->
+                </div>
+            </div>
+        </div>
+        <!-- start post content section -->
 
             <div class="container">
                 <div class=" row col-4-nth sm-col-2-nth  margin-80px-top">
-                  <?php $postQuery = new WP_Query(array( 'post_type' => 'post', 'post_per_page'=> -1,'orderby' => 'post_id', 'order' => 'DESC'));
+                  <?php $post = array( 'post_type' => 'post', 'orderby' => 'post_id', 'order' => 'DESC' );
+                        $postQuery = new WP_Query($post);
                         if($postQuery->have_posts() ) : while($postQuery->have_posts() ) : $postQuery->the_post();
                         $author = get_field('author_name');
                         $navigationSetting = get_field('post_blog_setting');
@@ -69,13 +84,13 @@ get_header();
                       <div class="col-md-3 col-sm-6 col-xs-12 margin-50px-bottom last-paragraph-no-margin xs-margin-30px-bottom wow fadeInUp <?php echo $navigationSetting; ?>">
                           <div class="blog-post blog-post-style1 xs-text-center">
                               <div class="blog-post-images overflow-hidden margin-25px-bottom sm-margin-20px-bottom">
-                                <?php if (has_post_thumbnail()) : ?>
+                                <?php if (has_post_thumbnail()) { ?>
                                  <a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>" target="_blank">
                                     <?php the_post_thumbnail(); ?>
                                  </a>
-                               <?php  else : ?>
+                               <?php } else { ?>
                                  <img src="http://via.placeholder.com/400x300" alt="<?php echo $image1_alt; ?>" target="_blank">
-                               <?php endif;  ?>
+                               <?php } ?>
                               </div>
                               <div class="post-details">
 
@@ -88,8 +103,8 @@ get_header();
                       </div>
 
                   <?php endwhile; else: ?>
-                      <h1>Our blog page is under construction. Please check back again later.</h1>
-                  <?php endif; wp_reset_query();?>
+                      <h1>missing post</h1>
+                  <?php endif; ?>
                     <!-- end post item -->
 
 

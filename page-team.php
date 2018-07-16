@@ -38,25 +38,21 @@ get_header();
     <div class="container-fluid padding-seventeen-lr md-padding-ten-lr xs-padding-15px-lr">
         <div class="row">
             <!-- start team item -->
-              <?php $cptui_team_profiles = new WP_Query( array( 'post_type' => 'team_profiles', 'orderby' => 'post_id', 'order' => 'DESC') );
-              if($cptui_team_profiles->have_posts()): while ( $cptui_team_profiles->have_posts() ) : $cptui_team_profiles->the_post();
-              $tags = get_the_tags( );
-              ?>
-                <div class="col-md-3 col-sm-6 col-xs-12 team-block text-left team-style-1 margin-40px-bottom sm-margin-seven-bottom xs-margin-30px-bottom ">
+              <?php $cptui_team_profiles = new WP_Query( array( 'post_type' => 'team_profiles', 'orderby' => 'post_id', 'order' => 'DESC') ); ?>
+              <?php if($cptui_team_profiles->have_posts()): while ( $cptui_team_profiles->have_posts() ) : $cptui_team_profiles->the_post();?>
+                <div class="col-md-3 col-sm-6 col-xs-12 team-block text-left team-style-1 margin-40px-bottom sm-margin-seven-bottom xs-margin-30px-bottom wow fadeInRight">
                 <figure>
                     <div class="team-image xs-width-100">
-                      <?php $featured_img_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
-                      echo '<a href="'.esc_url($featured_img_url).'" rel="lightbox">'; the_post_thumbnail(); echo '</a>'; ?>
-
+                      <?php $featured_img_url = get_the_post_thumbnail_url(get_the_ID(), 'full'); echo '<a href="'.esc_url($featured_img_url).'" rel="lightbox">'; the_post_thumbnail(); echo '</a>'; ?>
                         <div class="overlay-content text-center">
                             <div class="display-table height-100 width-100">
                                 <div class="vertical-align-bottom display-table-cell icon-social-small padding-twelve-all">
                                     <span class="text-white text-small display-inline-block no-margin"><?php the_excerpt(); ?></span>
                                     <div class="separator-line-horrizontal-full bg-deep-pink margin-eleven-tb"></div>
                                     <?php if(have_rows('cptui_social_media_box')):while(have_rows('cptui_social_media_box') ) : the_row(); ?>
-                                      <a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>" target="_blank"><i class="text-white fa fa-user"></i></a>
-                                      <a href="<?php the_sub_field('cptui_social_media_link'); ?>" class="text-white" target="_blank"><i class="fa fa-<?php the_sub_field('cptui_social_media_icon')?>"></i></a>
-                                    <?php endwhile; endif; ?>
+                                    <a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>" target="_blank"><i class="text-white fa fa-user"></i></a>
+                                    <a href="<?php the_sub_field('cptui_social_media_link'); ?>" class="text-white" target="_blank"><i class="fa fa-<?php the_sub_field('cptui_social_media_icon')?>"></i></a>
+                                  <?php endwhile; endif;?>
                                 </div>
                             </div>
                         </div>
@@ -65,13 +61,12 @@ get_header();
                     <figcaption>
                         <div class="team-member-position margin-20px-top text-center">
                             <div class="text-small font-weight-500 text-extra-dark-gray text-uppercase"><?php the_title(); ?></div>
-                            <div class="text-extra-small text-uppercase text-medium-gray">
-                              <?php if($tags): foreach ($tags as $tag) { echo $tag->name . ' '; } endif; ?></div>
+                            <div class="text-extra-small text-uppercase text-medium-gray"><?php the_tags(' ', ',' , ''); ?></div>
                         </div>
                     </figcaption>
                 </figure>
             </div>
-              <?php endwhile; endif; wp_reset_query();?>
+              <?php endwhile; endif; ?>
             <!-- end team item -->
         </div>
     </div>

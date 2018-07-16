@@ -6,7 +6,7 @@ $testimonial_title = get_field('testimonial_title'); ?>
         <div class="row">
             <div class="col-md-7 col-sm-12 col-xs-12 center-col text-center margin-50px-top xs-margin-40px-top margin-100px-bottom xs-margin-40px-bottom">
                 <div class="position-relative overflow-hidden width-100">
-                    <span class="text-outside-line-full alt-font font-weight-600 fs-40px padding-40px-tb text-white"><?php echo $testimonial_title; ?></span>
+                    <span class="text-small text-outside-line-full alt-font font-weight-600 text-uppercase text-white"><?php echo $testimonial_title; ?></span>
                 </div>
             </div>
         </div>

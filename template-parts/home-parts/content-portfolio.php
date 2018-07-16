@@ -1,8 +1,8 @@
-<section class="wow fadeIn color-code no-padding xs-padding-50px-tb parallax" data-color="6" style="background: url('wp-content/themes/cimmp-v2/assets/images/splash/3.png') 140% 0% /50% no-repeat; height: 80vh;" >
+<section class="wow fadeIn color-code no-padding xs-padding-50px-tb parallax" data-color="6" style="background: url('http://cimmp.com/wp-content/uploads/2018/06/3.png') 140% 0% /50% no-repeat; height: 80vh;" >
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-9 col-sm-10 col-xs-12 center-col text-center margin-100px-top">
-                <div class="fs-40px padding-40px-top letter-spacing-3 alt-font text-white margin-70px-bottom sm-margin-50px-bottom xs-margin-30px-bottom display-inline-block">What Have We Worked On?</div>
+                <div class="text-extra-small letter-spacing-3 alt-font text-white text-uppercase margin-70px-bottom sm-margin-50px-bottom xs-margin-30px-bottom display-inline-block">What Have We Worked On?</div>
             </div>
         </div>
         <div class="row">

@@ -38,7 +38,7 @@
               </div>
               <div class="sidebar-part3">
                   <div class="bottom-menu-icon">
-                      <a href="#" class="right-menu-button text-extra-dark-gray nav-icon" id="showRightPush">
+                      <a class="right-menu-button text-extra-dark-gray nav-icon" id="showRightPush">
                           <span></span>
                           <span></span>
                           <span></span>
