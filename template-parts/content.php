@@ -65,7 +65,8 @@
 
 									<div class="margin-10px-top">
 
-									<?php the_content();  ?>									</div>
+									<?php the_content();  ?>
+								</div>
 
 								</div>
 
@@ -92,107 +93,13 @@
 
 
 
-<!--
-
-<div class="col-md-12 col-sm-12 col-xs-12 margin-30px-top">
-		<div class="display-table width-100 border-all border-color-extra-light-gray padding-50px-all sm-padding-30px-all xs-padding-20px-all">
-<?//php $cptui_employee_prof = new WP_Query( array('author'=> get_current_user_id(), 'post_type' => 'employee_profiles', 'posts_per_page' => 1, 'orderby' => 'post_id', 'order' => 'ASC') ); ?>
-<?//php if($cptui_employee_prof->have_posts()): while ( $cptui_employee_prof->have_posts() ) : $cptui_employee_prof->the_post();?>
-	<div class="display-table-cell width-130px text-center vertical-align-top xs-margin-15px-bottom xs-width-100 xs-display-block xs-text-center">
-		<?//php $featured_img_url = get_the_post_thumbnail_url(get_the_ID(), 'full'); echo '<a href="'.esc_url($featured_img_url).'" rel="lightbox">'; the_post_thumbnail('thumbnail',array('class'=>'img-circle width-100px')); echo '</a>'; ?>
-	</div>
-
-	<div class="padding-40px-left display-table-cell vertical-align-top last-paragraph-no-margin xs-no-padding-left xs-display-block xs-text-center">
-			<a href="#" class="text-extra-dark-gray text-uppercase alt-font font-weight-600 margin-10px-bottom display-inline-block text-small"><?//php the_author(); ?></a>
-			<p class="margin-20px-bottom text-small"><?//php the_excerpt(); ?></p>
-	</div>
-<?//php endwhile; endif; ?>
-
-		</div>
-</div>
-								<div class="col-md-12 col-sm-12 col-xs-12 margin-eight-top">
-										<div class="divider-full bg-medium-light-gray"></div>
-								</div>
-								<div class="col-md-12 col-sm-12 col-xs-12 blog-details-comments">
-										<div class="width-100 margin-lr-auto text-center margin-80px-tb sm-margin-50px-tb xs-margin-30px-tb">
-												<div class="position-relative overflow-hidden width-100">
-														<span class="text-small text-outside-line-full alt-font font-weight-600 text-uppercase text-extra-dark-gray">10 Comments</span>
-												</div>
-										</div>
-										<ul class="blog-comment">
-												<li>
-														<div class="display-table width-100">
-																<div class="display-table-cell width-100px xs-width-50px text-center vertical-align-top xs-display-block xs-margin-10px-bottom">
-																		<img src="http://placehold.it/149x149" class="img-circle width-85 xs-width-100" alt="" />
-																</div>
-																<div class="padding-40px-left display-table-cell vertical-align-top last-paragraph-no-margin xs-no-padding-left xs-display-block">
-																		<a href="#" class="text-extra-dark-gray text-uppercase alt-font font-weight-600 text-small">Herman Miller</a>
-																		<a href="#comments" class="inner-link btn-reply text-uppercase alt-font text-extra-dark-gray">Reply</a>
-																		<div class="text-small text-medium-gray text-uppercase margin-10px-bottom">17 july 2017, 6:05 pm</div>
-																		<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>
-																</div>
-														</div>
-														<ul class="child-comment">
-																<li>
-																		<div class="display-table width-100">
-																				<div class="display-table-cell width-100px xs-width-50px text-center vertical-align-top xs-display-block xs-margin-10px-bottom">
-																						<img src="http://placehold.it/149x149" class="img-circle width-85 xs-width-100" alt="" />
-																				</div>
-																				<div class="padding-40px-left display-table-cell vertical-align-top last-paragraph-no-margin xs-no-padding-left xs-display-block">
-																						<a href="#" class="text-extra-dark-gray text-uppercase alt-font font-weight-600 text-small">Alexander Harvard</a>
-																						<a href="#comments" class="inner-link btn-reply text-uppercase alt-font text-extra-dark-gray">Reply</a>
-																						<div class="text-small text-medium-gray text-uppercase margin-10px-bottom">17 july 2017, 6:05 pm</div>
-																						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>
-																				</div>
-																		</div>
-																</li>
-														</ul>
-												</li>
-												<li>
-														<div class="display-table width-100">
-																<div class="display-table-cell width-100px xs-width-50px text-center vertical-align-top xs-display-block xs-margin-10px-bottom">
-																		<img src="http://placehold.it/149x149" class="img-circle width-85 xs-width-100" alt="" />
-																</div>
-																<div class="padding-40px-left display-table-cell vertical-align-top last-paragraph-no-margin xs-no-padding-left xs-display-block">
-																		<a href="#" class="text-extra-dark-gray text-uppercase alt-font font-weight-600 text-small">Jennifer Freeman</a>
-																		<a href="#comments" class="inner-link btn-reply text-uppercase alt-font text-extra-dark-gray">Reply</a>
-																		<div class="text-small text-medium-gray text-uppercase margin-10px-bottom">17 july 2017, 6:05 pm</div>
-																		<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>
-																</div>
-														</div>
-												</li>
-										</ul>
-								</div>
-								<div class="col-md-12 col-sm-12 col-xs-12 margin-eight-top" id="comments">
-										<div class="divider-full bg-medium-light-gray"></div>
-								</div> -->
-								<!-- <div class="col-md-12 col-sm-12 col-xs-12 margin-lr-auto text-center margin-80px-tb sm-margin-50px-tb xs-margin-30px-tb">
-										<div class="position-relative overflow-hidden width-100">
-												<span class="text-small text-outside-line-full alt-font font-weight-600 text-uppercase text-extra-dark-gray">Write A Comments</span>
-										</div>
-								</div>
-								<div class="col-md-4 col-sm-12 col-xs-12">
-										<input type="text" placeholder="Name *" class="medium-input">
-								</div>
-								<div class="col-md-4 col-sm-12 col-xs-12">
-										<input type="text" placeholder="E-mail *" class="medium-input">
-								</div>
-								<div class="col-md-4 col-sm-12 col-xs-12">
-										<input type="url" placeholder="Website" class="medium-input">
-								</div>
-								<div class="col-md-12 col-sm-12 col-xs-12">
-										<textarea placeholder="Enter your comment here.." rows="8" class="medium-textarea"></textarea>
-								</div>
-								<div class="col-md-12 col-sm-12 col-xs-12 text-center">
-										<button class="btn btn-dark-gray btn-small margin-15px-top" type="submit">Send message</button>
-								</div> -->
 						</main>
 						<aside class="col-md-3 col-sm-12 col-xs-12 pull-right">
 								<div class="display-inline-block width-100 margin-45px-bottom xs-margin-25px-bottom">
-										<form >
+										<form action="<?php echo home_url('/'); ?>" method="get">
 												<div class="position-relative">
-														<input type="text" value="<?php the_search_query(); ?>" class="bg-transparent text-small no-margin border-color-extra-light-gray medium-input pull-left" placeholder="Enter your keywords...">
-														<button type="submit" class="bg-transparent  btn position-absolute right-0 top-1"><i class="fa fa-search no-margin-left"></i></button>
+													<input class="text-white" type="text" name="s" class="bg-transparent text-small no-margin border-color-extra-light-gray medium-input pull-left" value="<?php echo get_search_query() ?>" placeholder="Search">
+														<button type="s" class="bg-transparent  btn position-absolute right-0 top-1"><i class="fa fa-search no-margin-left"></i></button>
 												</div>
 										</form>
 								</div>
@@ -227,11 +134,11 @@
 
 
 								<div class="margin-45px-bottom xs-margin-25px-bottom">
-										<div class="text-extra-dark-gray margin-25px-bottom alt-font text-uppercase font-weight-600 text-small aside-title"><span>tags cloud</span></div>
-										<div class="tag-cloud">
-											<?php	the_widget( 'WP_Widget_Tag_Cloud' ); ?>
+									<div class="text-extra-dark-gray margin-25px-bottom alt-font text-uppercase font-weight-600 text-small aside-title"><span>tags cloud</span></div>
+									<div class="tag-cloud">
+										<?php echo get_the_tags(); ?>
 
-										</div>
+									</div>
 								</div>
 								<div class="margin-45px-bottom xs-margin-25px-bottom">
 										<div class="text-extra-dark-gray margin-25px-bottom alt-font text-uppercase font-weight-600 text-small aside-title"><span>Archive</span></div>

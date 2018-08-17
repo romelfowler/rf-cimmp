@@ -10,7 +10,7 @@ function _remove_script_version( $src ){
 add_filter( 'script_loader_src', '_remove_script_version', 15, 1 );
 add_filter( 'style_loader_src', '_remove_script_version', 15, 1 );
 
-
+include('themeLib/var.php');
 require_once('template-parts/nav/custom_nav.php');
 /**
  * CIMMP-V2 functions and definitions

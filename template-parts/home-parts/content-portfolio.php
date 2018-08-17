@@ -31,7 +31,7 @@
                                     <div class="portfolio-hover-main">
                                         <div class="portfolio-hover-box vertical-align-middle">
                                             <span class="text-medium alt-font text-extra-dark-gray margin-5px-bottom"><?php the_title(); ?></span>
-                                            <p class="text-small no-letter-spacing text-medium-gray"><?php echo $firstCategory; ?></p>
+                                            <p class="text-large no-letter-spacing text-medium-gray"><?php echo $firstCategory; ?></p>
                                         </div>
                                     </div>
                                 </figcaption>
