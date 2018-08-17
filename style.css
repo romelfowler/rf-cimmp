@@ -18,8 +18,7 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
-*/
-@charset "UTF-8";
+*/@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Helvetica:400,700");
 @import url("https://fonts.googleapis.com/css?family=Raleway:400,100,300,500,700,900");
 @-webkit-keyframes fadeIn {
@@ -11429,7 +11428,7 @@ nav.navbar.sidebar-nav {
 
 /* line 1943, assets/sass/import/_header.sass */
 header .sidebar-part2 nav.navbar.bootsnav ul > li > a {
-  font-size: 32px;
+  font-size: 30px;
   display: block;
   padding: 0;
   color: #0f0f0f;

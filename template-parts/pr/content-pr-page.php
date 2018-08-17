@@ -4,13 +4,22 @@
             <div class="filter-content overflow-hidden">
                 <ul class="portfolio-grid portfolio-metro-grid work-4col hover-option8 gutter-medium">
                     <li class="grid-sizer"></li>
-                    <?php $postQuery = new WP_Query( array( 'post_type' => 'cimmp_pr', 'posts_per_page'=>'-1','orderby' => 'post_id', 'order' => 'DESC' ) );
-                          if($postQuery->have_posts() ) : while($postQuery->have_posts() ) : $postQuery->the_post();
-          
-                          ?>
+                    <?php
+                    $args = array(
+                      'post_type' => 'cimmp_pr',
+                      'post_status'=> 'publish'
+                    );
+                    $postQuery = new WP_Query( $args );
+                    if($postQuery->have_posts() ) : while($postQuery->have_posts() ) : $postQuery->the_post();
+                    $grid_item_size = get_field('grid_item_size');
+                    $grid_item_delay = get_field('grid_item_delay');
+                    $grid_menu_item = get_field('grid_menu_item');
+                    $category = get_the_category();
+                    $firstCategory = $category[0]->cat_name;
+                    ?>
 
                     <!-- start portfolio item -->
-                    <li class="<?php echo $grid_item_size; ?> <?php echo implode(' ' , $grid_menu_item); ?> wow fadeInUp" data-wow-delay="<?php echo $grid_item_delay; ?>">
+                    <li class=" <?php echo $grid_item_size; ?> <?php echo implode(' ' , $grid_menu_item); ?> wow fadeInUp" data-wow-delay="<?php echo $grid_item_delay; ?>">
                         <a href="<?php the_permalink(); ?>">
                             <figure>
                               <?php if( has_post_thumbnail() ) :  ?>

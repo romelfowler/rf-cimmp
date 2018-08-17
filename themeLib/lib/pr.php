@@ -28,8 +28,8 @@ $args = array(
     'show_in_menu'        => true,
     'show_in_nav_menus'   => true,
     'show_in_admin_bar'   => true,
-    'menu_position'       => 13,
-    'menu_icon'           =>'dashicons-universal-access-alt',
+    'menu_position'       => 21,
+    'menu_icon'           =>'dashicons-megaphone',
     'can_export'          => true,
     'has_archive'         => true,
     'exclude_from_search' => false,
@@ -42,4 +42,4 @@ $args = array(
 
   register_post_type( 'cimmp_pr', $args );
 }
-add_action( 'init', 'cimmp_pr_pt', 13 );
+add_action( 'init', 'cimmp_pr_pt', 21 );
