@@ -16,10 +16,10 @@ get_header();
                 <!-- start filter navigation -->
                 <ul class="portfolio-filter nav nav-tabs border-none portfolio-filter-tab-1 font-weight-600 alt-font text-uppercase text-center margin-80px-bottom text-small sm-margin-40px-bottom xs-margin-20px-bottom">
                     <li class="nav active"><a href="javascript:void(0);" data-filter="*" class="xs-display-inline light-gray-text-link text-very-small">All</a></li>
-                    <li class="nav"><a href="javascript:void(0);" data-filter=".brand" class="xs-display-inline light-gray-text-link text-very-small">Brand Management</a></li>
-                    <li class="nav"><a href="javascript:void(0);" data-filter=".digital" class="xs-display-inline light-gray-text-link text-very-small">Digital</a></li>
-                    <li class="nav"><a href="javascript:void(0);" data-filter=".logo" class="xs-display-inline light-gray-text-link text-very-small">Logo</a></li>
-                    <li class="nav"><a href="javascript:void(0);" data-filter=".print" class="xs-display-inline light-gray-text-link text-very-small">Print</a></li>
+                    <li class="nav"><a href="javascript:void(0);" data-filter=".coverStory" class="xs-display-inline light-gray-text-link text-very-small">Cover Storys</a></li>
+                    <li class="nav"><a href="javascript:void(0);" data-filter=".nonProfit" class="xs-display-inline light-gray-text-link text-very-small">Non-Profits</a></li>
+                    <li class="nav"><a href="javascript:void(0);" data-filter=".features" class="xs-display-inline light-gray-text-link text-very-small">Features</a></li>
+                    <li class="nav"><a href="javascript:void(0);" data-filter=".promoAwards" class="xs-display-inline light-gray-text-link text-very-small">Promotion/Awards</a></li>
 
                 </ul>
                 <!-- end filter navigation -->
