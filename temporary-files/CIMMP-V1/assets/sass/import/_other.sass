@@ -1,0 +1,80 @@
+// Others
+
+/* services modern */
+
+.arrow-bottom
+  position: relative
+
+
+.arrow-bottom:after
+  top: 100%
+  left: 50%
+  border: solid transparent
+  content: " "
+  height: 0
+  width: 0
+  position: absolute
+  pointer-events: none
+  border-color: $white-opacity-0
+  border-top-color: $gray-4
+  border-width: 15px
+  margin-left: -15px
+  z-index: 9
+
+
+.arrow-top
+  position: relative
+
+
+.arrow-top:after
+  top: -29px
+  left: 50%
+  border: solid transparent
+  content: " "
+  height: 0
+  width: 0
+  position: absolute
+  pointer-events: none
+  border-color: $white-opacity-0
+  border-bottom-color: $gray-4
+  border-width: 15px
+  margin-left: -15px
+  z-index: 9
+
+
+/* our clients */
+
+.clients-list
+  height: 190px
+
+
+.clients-list:hover
+  box-shadow: 0 0 4px $black-opacity-10
+
+
+.clients-list:hover img
+  -webkit-filter: grayscale(1)
+  filter: grayscale(1)
+
+
+/* sidebar nav style 2 */
+
+.tparrows:before
+  font-family: 'FontAwesome'
+
+
+.tparrows.tp-leftarrow:before
+  content: '\f060'
+
+
+.tparrows.tp-rightarrow:before
+  content: '\f061'
+
+
+/* rev slider */
+
+.rev_slider_wrapper
+  height: 980px
+
+
+/* animation */

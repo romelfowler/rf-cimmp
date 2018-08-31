@@ -1,0 +1,709 @@
+
+// Swiper
+
+.swiper
+  &-container
+    overflow: hidden
+    position: relative
+
+  &-scrollbar
+    background: $opacity-theme-color-2
+
+  &-pagination-bullet-active
+    background: $black-4
+
+  &-pagination
+    width: 100%
+
+  &-container-horizontal>&-pagination-bullets, &-pagination-custom, &-pagination-fraction
+    bottom: 35px
+    width: 100%
+
+  &-pagination-bullet
+    height: 9px
+    width: 9px
+
+  &-pagination-bullets &-pagination-bullet
+    margin: 0 5px
+
+  &-pagination-bottom &-wrapper
+    margin: 0 0 35px 0
+
+  &-pagination-bottom &-container-horizontal &-wrapper
+    margin: 0 0 95px 0
+
+  &-slider-second
+    text-align: center
+
+/* swiper bottom scrollbar full */
+
+.swiper-bottom-scrollbar-full
+  &.swiper-container
+    height: 100%
+    margin: 0 auto
+    overflow: hidden
+    position: absolute
+    top: 0
+    @include transition(all 0.3s ease-in-out 0.7s)
+    width: 100%
+
+  & .swiper-scrollbar
+    left: 0
+    opacity: 1
+    position: absolute
+    width: 100%
+    bottom: 0
+    border-radius: 0
+    height: 2px
+
+  & .swiper-scrollbar-drag
+    border-radius: 0
+    background: $pink-1
+
+  & .swiper-scrollbar
+    background: $white-opacity-2
+
+  & .swiper-slide img
+    max-height: 450px
+    @include transition(all 0.3s ease-in-out)
+    @include filter(grayscale(1))
+    opacity: .8
+
+  & .swiper-slide:hover img
+    opacity: 1
+    @include filter(grayscale(0))
+    @include filter(contrast(130%))
+    max-height: 500px
+
+  & .swiper-slide .hover-title-box
+    visibility: hidden
+
+  & .swiper-slide:hover .hover-title-box
+    right: -160px
+    opacity: 1
+    visibility: visible
+
+  & .bottom-text
+    position: absolute
+    bottom: 50px
+    opacity: 0
+    transition: all 0.3s ease-in-out
+    -webkit-transition: all 0.3s ease-in-out
+    -moz-transition: all 0.3s ease-in-out
+    -ms-transition: all 0.3s ease-in-out
+    -o-transition: all 0.3s ease-in-out
+
+  & .swiper-slide:hover .bottom-text
+    opacity: .7
+    letter-spacing: 5px
+    left: 4px
+
+/* swiper vertical pagination */
+
+.swiper-vertical-pagination
+  width: 100%
+  height: 100%
+  position: absolute
+
+.swiper-vertical-pagination .swiper-slide
+  text-align: center
+  background: $white
+  display: -webkit-box
+  display: -ms-flexbox
+  display: -webkit-flex
+  display: flex
+  -webkit-box-pack: center
+  -ms-flex-pack: center
+  -webkit-justify-content: center
+  justify-content: center
+  -webkit-box-align: center
+  -ms-flex-align: center
+  -webkit-align-items: center
+  align-items: center
+
+.swiper-vertical-pagination>.swiper-pagination-bullets
+  right: 60px
+
+.swiper-vertical-pagination .swiper-pagination
+  width: auto
+
+.swiper-vertical-pagination .swiper-slide .swiper-bottom-content
+  opacity: 0
+  transform: translate3d(0px, 150px, 0px)
+  -webkit-transform: translate3d(0px, 150px, 0px)
+  -moz-transform: translate3d(0px, 150px, 0px)
+  -ms-transform: translate3d(0px, 150px, 0px)
+  -o-transform: translate3d(0px, 150px, 0px)
+  transition: all 0.3s ease-in-out 0s
+  -webkit-transition: all 0.3s ease-in-out 0s
+  -moz-transition: all 0.3s ease-in-out 0s
+  -ms-transition: all 0.3s ease-in-out 0s
+  -o-transition: all 0.3s ease-in-out 0s
+
+.swiper-vertical-pagination .swiper-slide-active .swiper-bottom-content
+  opacity: 1
+  transform: translate3d(0px, 0px, 0px)
+  -webkit-transform: translate3d(0px, 0px, 0px)
+  -moz-transform: translate3d(0px, 0px, 0px)
+  -ms-transform: translate3d(0px, 0px, 0px)
+  -o-transform: translate3d(0px, 0px, 0px)
+  transition: all 0.3s ease-in-out 0.3s
+  -webkit-transition: all 0.3s ease-in-out 0.3s
+  -moz-transition: all 0.3s ease-in-out 0.3s
+  -ms-transition: all 0.3s ease-in-out 0.3s
+  -o-transition: all 0.3s ease-in-out 0.3s
+
+.swiper-vertical-pagination .box-arrow
+  position: absolute
+  right: -45px
+  width: 90px
+  height: 90px
+
+/* swiper auto width */
+
+.swiper-auto-width
+  .swiper-slide
+    width: 60%
+
+  &.swiper-container
+    height: calc(100% - 200px)
+    top: 100px
+    margin: 0 auto
+    overflow: visible
+    position: absolute
+    @include transformScale(1)
+    transition: all 0.3s ease-in-out 0.7s
+    -webkit-transition: all 0.3s ease-in-out 0.7s
+    -moz-transition: all 0.3s ease-in-out 0.7s
+    -ms-transition: all 0.3s ease-in-out 0.7s
+    -o-transition: all 0.3s ease-in-out 0.7s
+    width: 100%
+
+  & .swiper-scrollbar
+    left: 20%
+    opacity: 1
+    position: absolute
+    width: 60%
+    bottom: -50px
+    border-radius: 0
+    height: 1px
+
+  & .swiper-scrollbar-drag
+    border-radius: 0
+    background: transparent
+
+  & .swiper-scrollbar-drag:before
+    cursor: move
+    position: absolute
+    content: ""
+    background: $bg-theme-color-1
+    width: 13px
+    height: 13px
+    border-radius: 100%
+    top: -6px
+    left: calc(50% - 13px)
+
+  & .swiper-slide
+    filter: contrast(130%)
+    -webkit-filter: contrast(130%)
+    -moz-filter: contrast(130%)
+    -ms-filter: contrast(130%)
+    -o-filter: contrast(130%)
+    filter: grayscale(1)
+    -webkit-filter: grayscale(1)
+    -moz-filter: grayscale(1)
+    -ms-filter: grayscale(1)
+    -o-filter: grayscale(1)
+    transition: all 0.3s ease-in-out 0s
+    -webkit-transition: all 0.3s ease-in-out 0s
+    -moz-transition: all 0.3s ease-in-out 0s
+    -ms-transition: all 0.3s ease-in-out 0s
+    -o-transition: all 0.3s ease-in-out 0s
+
+  & .swiper-slide.swiper-slide-active
+    filter: contrast(0)
+    -webkit-filter: contrast(0)
+    -moz-filter: contrast(0)
+    -ms-filter: contrast(0)
+    -o-filter: contrast(0)
+    filter: grayscale(0)
+    -webkit-filter: grayscale(0)
+    -moz-filter: grayscale(0)
+    -ms-filter: grayscale(0)
+    -o-filter: grayscale(0)
+    transition: all 0.3s ease-in-out
+    -webkit-transition: all 0.3s ease-in-out
+    -moz-transition: all 0.3s ease-in-out
+    -ms-transition: all 0.3s ease-in-out
+    -o-transition: all 0.3s ease-in-out
+
+  & .swiper-slide .absolute-middle-center h2
+    opacity: 0
+    margin-bottom: 10px
+    transition: all 0.3s ease-in-out
+    -webkit-transition: all 0.3s ease-in-out
+    -moz-transition: all 0.3s ease-in-out
+    -ms-transition: all 0.3s ease-in-out
+    -o-transition: all 0.3s ease-in-out
+    transform: translateY(-60px)
+    -webkit-transform: translateY(-60px)
+    -moz-transform: translateY(-60px)
+    -ms-transform: translateY(-60px)
+    -o-transform: translateY(-60px)
+
+  & .swiper-slide.swiper-slide-active .absolute-middle-center h2
+    opacity: 1
+    transition: all 0.3s ease-in-out 0.7s
+    -webkit-transition: all 0.3s ease-in-out 0.7s
+    -moz-transition: all 0.3s ease-in-out 0.7s
+    -ms-transition: all 0.3s ease-in-out 0.7s
+    -o-transition: all 0.3s ease-in-out 0.7s
+    transform: translateY(0px)
+    -webkit-transform: translateY(0px)
+    -moz-transform: translateY(0px)
+    -ms-transform: translateY(0px)
+    -o-transform: translateY(0px)
+
+  & .swiper-slide span
+    opacity: 0
+    transition: all 0.5s ease-in-out
+    -webkit-transition: all 0.5s ease-in-out
+    -moz-transition: all 0.5s ease-in-out
+    -ms-transition: all 0.5s ease-in-out
+    -o-transition: all 0.5s ease-in-out
+
+  & .swiper-slide.swiper-slide-active span
+    opacity: 1
+    transition: all 0.5s ease-in-out
+    -webkit-transition: all 0.5s ease-in-out
+    -moz-transition: all 0.5s ease-in-out
+    -ms-transition: all 0.5s ease-in-out
+    -o-transition: all 0.5s ease-in-out
+
+/* arrow pagination black and white */
+
+.swiper-button-next, .swiper-container-rtl .swiper-button-prev
+  background-image: $swiper-btn-next-prev-rtl
+  right: 10px
+  left: auto
+
+.swiper-button-prev.swiper-button-white, .swiper-container-rtl .swiper-button-next.swiper-button-white
+  background-image: $swiper-btn-prev-white
+
+.swiper-button-next.swiper-button-white, .swiper-container-rtl .swiper-button-prev.swiper-button-white
+  background-image: $swiper-btn-next-white
+
+.swiper-button-next.swiper-button-black, .swiper-container-rtl .swiper-button-prev.swiper-button-black
+  background-image: $swiper-btn-next-black
+
+.swiper-button-prev.swiper-button-black, .swiper-container-rtl .swiper-button-next.swiper-button-black
+  background-image: $swiper-btn-prev-black
+.swiper-button-prev.swiper-button-white-highlight, .swiper-container-rtl .swiper-button-next.swiper-button-white-highlight
+  background-image: $swiper-btn-prev-white-highl
+
+.swiper-button-next.swiper-button-white-highlight, .swiper-container-rtl .swiper-button-prev.swiper-button-white-highlight
+  background-image: $swiper-btn-next-white-highl
+
+.swiper-button-next.swiper-button-white-highlight, .swiper-button-prev.swiper-button-white-highlight
+  background-color: $black
+  background-size: 28% auto
+  border-radius: 3px
+  height: 30px
+  width: 30px
+  margin: -15px 10px 0
+  top: 50%
+
+.swiper-button-next.swiper-button-black-highlight, .swiper-container-rtl .swiper-button-prev.swiper-button-black-highlight
+  background-image: $swiper-btn-next-black-highl
+
+.swiper-button-prev.swiper-button-black-highlight, .swiper-container-rtl .swiper-button-next.swiper-button-black-highlight
+  background-image: $swiper-btn-prev-black-highl
+
+.swiper-button-next.swiper-button-black-highlight, .swiper-button-prev.swiper-button-black-highlight
+  background-color: $white
+  background-size: 28% auto
+  border-radius: 3px
+  height: 30px
+  width: 30px
+  margin: -15px 10px 0
+  top: 50%
+
+.swiper-button-next, .swiper-button-prev
+  background-size: inherit
+  height: 22px
+  width: 50px
+  top: 51%
+
+.swiper-fullscreen-next
+  background-image: $swiper-fullscreen-next
+
+.swiper-fullscreen-prev
+  background-image: $swiper-fullscreen-prev
+
+.swiper-fullscreen-next, .swiper-fullscreen-prev
+  background-color: $white
+  background-size: 28% auto
+  border-radius: 3px
+  height: 30px
+  width: 30px
+  margin: 10px
+  top: 47.5%
+
+/* blog swiper */
+
+.swiper-blog .swiper-slide .slide-content
+  opacity: 0
+  transform: translateY(100px)
+  -webkit-transform: translateY(100px)
+  -moz-transform: translateY(100px)
+  -ms-transform: translateY(100px)
+  -o-transform: translateY(100px)
+
+.swiper-blog .swiper-slide.swiper-slide-active .slide-content
+  opacity: 1
+  transition-delay: 0.3s
+  -webkit-transition-delay: 0.3s
+  -moz-transition-delay: 0.3s
+  -ms-transition-delay: 0.3s
+  -o-transition-delay: 0.3s
+  transform: translateY(0)
+  -webkit-transform: translateY(0)
+  -moz-transform: translateY(0)
+  -ms-transform: translateY(0)
+  -o-transform: translateY(0)
+
+/* long arrow */
+
+.swiper-button-prev.slider-long-arrow-white, .swiper-container-rtl .swiper-button-next.slider-long-arrow-white
+  background-image: url('../images/arrow-prev-light-dark.png')
+  left: 0
+
+.swiper-button-next.slider-long-arrow-white, .swiper-container-rtl .swiper-button-prev.slider-long-arrow-white
+  background-image: url('../images/arrow-next-light-dark.png')
+  right: 0
+
+/* next prev button style 2 */
+
+.swiper-next-style2, .swiper-prev-style2
+  position: absolute
+  bottom: -60px
+  cursor: pointer
+  text-transform: uppercase
+
+.swiper-next-style2
+  right: 15%
+
+.swiper-prev-style2
+  left: 15%
+
+/* portfolio next prev button */
+
+.swiper-portfolio-prev, .swiper-portfolio-next
+  position: absolute
+  top: 50%
+  z-index: 1
+  background: $white
+  color: $black-4
+  padding: 15px
+  font-size: 18px
+  cursor: pointer
+  transform: translateY(-50%)
+  -webkit-transform: translateY(-50%)
+  -moz-transform: translateY(-50%)
+  -ms-transform: translateY(-50%)
+  -o-transform: translateY(-50%)
+
+.swiper-portfolio-prev.swiper-button-disabled, .swiper-portfolio-next.swiper-button-disabled
+  opacity: 0
+  visibility: hidden
+
+.swiper-portfolio-prev
+  left: 15px
+
+.swiper-portfolio-next
+  right: 15px
+
+/* next prev button style 3 */
+
+.swiper-button-prev.swiper-prev-style3, .swiper-button-next.swiper-next-style3
+  background-image: none
+  position: absolute
+  cursor: pointer
+  left: 41.1%
+  top: inherit
+  text-align: center
+  font-size: 16px
+  line-height: 40px
+  width: 40px
+  height: 40px
+  background-color: $pink-1
+  color: $white
+  z-index: 9
+
+.swiper-button-prev.swiper-prev-style3
+  bottom: 141px
+
+.swiper-button-next.swiper-next-style3
+  bottom: 100px
+
+/* next prev button style 4 */
+
+.navigation-area
+  position: absolute
+  bottom: 0
+  display: inline-block
+  width: 40px
+  height: 82px
+
+.swiper-button-prev.swiper-prev-style4, .swiper-button-next.swiper-next-style4
+  background-image: none
+  background: $pink-1
+  color: $white
+  text-align: center
+  line-height: 40px
+  height: 40px
+  width: 40px
+  display: block
+  float: left
+  position: relative
+  left: auto
+  right: auto
+  top: 0
+  margin: 0 auto
+
+.swiper-button-next.swiper-next-style4
+  margin-bottom: 1px
+
+/* next prev button style 5 */
+
+.swiper-button-prev.swiper-prev-style5, .swiper-button-next.swiper-next-style5
+  position: absolute
+  top: 22px
+  bottom: 0
+  height: 100%
+  width: 15%
+  background-image: none
+  transition-duration: 0.3s
+  -webkit-transition-duration: 0.3s
+  -moz-transition-duration: 0.3s
+  -ms-transition-duration: 0.3s
+  -o-transition-duration: 0.3s
+
+.swiper-button-prev.swiper-prev-style5
+  opacity: 0
+  background: -moz-linear-gradient(left, rgba(0, 0, 0, 0.5), transparent)
+  background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.5), transparent)
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.5), transparent)
+
+.swiper-button-next.swiper-next-style5
+  opacity: 0
+  background: -moz-linear-gradient(right, rgba(0, 0, 0, 0.5), transparent)
+  background: -webkit-linear-gradient(right, rgba(0, 0, 0, 0.5), transparent)
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.5), transparent)
+
+.swiper-button-prev.swiper-prev-style5:hover, .swiper-button-next.swiper-next-style5:hover
+  opacity: 1
+  transition-duration: 0.3s
+  -webkit-transition-duration: 0.3s
+  -moz-transition-duration: 0.3s
+  -ms-transition-duration: 0.3s
+  -o-transition-duration: 0.3s
+
+.swiper-button-prev.swiper-prev-style5
+  left: 0
+  cursor: $white-swiper-ico, pointer
+
+.swiper-button-next.swiper-next-style5
+  right: 0
+  cursor: $black-swiper-ico, pointer
+
+/* dot pagination white */
+
+.swiper-pagination-white .swiper-pagination-bullet
+  background: $black-opacity-6
+
+  @media screen and (max-width: $iphone)
+    background: $bg-theme-color-2
+
+.swiper-pagination-white .swiper-pagination-bullet-active
+  background: $bg-theme-color-1
+
+  @media screen and (max-width: $iphone)
+    background: $bg-theme-color-2
+
+
+
+.swiper-pagination-square-bottom.swiper-pagination-bullets
+  bottom: -50px
+
+/* square pagination */
+
+.swiper-pagination-square .swiper-pagination-bullet
+  height: 3px
+  width: 30px
+  border-radius: 0
+
+/* square pagination */
+
+.white-move .swiper-slide
+  cursor: $white-swiper-ico, move
+
+.black-move .swiper-slide
+  cursor: $black-swiper-ico, move
+
+/* number pagination */
+
+.swiper-number
+  left: auto !important
+  right: 20px !important
+  width: 35px !important
+  text-align: right !important
+  top: 38% !important
+  bottom: inherit !important
+
+  & .swiper-pagination-bullet
+    background: transparent
+    color: $white-opacity-4
+    display: block
+    font-size: 20px
+    height: 45px
+    line-height: 20px
+    opacity: .7
+    padding: 14px 0 0
+    text-align: center
+    width: 23px
+    border-radius: 0
+    margin: 0 0 5px 0
+
+  & .swiper-pagination-bullet.swiper-pagination-bullet-active
+    border-bottom: 1px solid $white-opacity-3
+    opacity: 1
+
+  & .swiper-pagination-bullet-active
+    color: $white
+    background: transparent
+
+/* revolution slider bullet */
+
+.tp-bullet
+  border-radius: 100%
+  background: transparent
+  border: 1px solid $white
+
+.tp-bullet.selected, .tp-bullet:hover
+  background: $white
+
+.hermes .tp-bullet
+  box-shadow: 0 0 0 0 $white
+  height: 12px
+  width: 12px
+  border: 2px solid $white
+
+.hermes .tp-bullet::after
+  box-shadow: 0 0 0 0 $white inset
+
+/* slider height */
+
+.slider
+  &-half-small-screen
+    min-height: 630px
+
+  &-half-screen
+    min-height: 765px
+
+  &-medium-screen
+    min-height: 898px
+
+  &-half-small-screen-font
+    width: 630px
+
+  &-half-screen-font
+    width: 765px
+
+  &-medium-screen-font
+    width: 898px
+
+
+/* scroll down */
+
+.scroll-down
+  bottom: 0px
+  position: absolute
+  text-align: center
+  width: 100%
+  z-index: 11
+
+.scroll-down a
+  background: $black-4
+  display: inline-block
+  height: 57px
+  width: 57px
+  text-align: center
+
+.scroll-down a i.scroll-arrow-down
+  vertical-align: top
+  background-image: $ico-scroll-down
+  width: 17px
+  height: 30px
+  display: inline-block
+
+.scroll-down a:hover
+  background: $white
+
+.scroll-to-down
+  cursor: $ico-scroll-to-down, pointer
+
+.scroll-to-down-white
+  cursor: $scroll-to-down-white, pointer
+
+.background-slider-text
+  position: absolute
+  width: 100%
+
+/* cursor */
+
+.cursor-default
+  cursor: default
+
+// Slider and parallax typography
+
+.slider-text-middle-main
+  display: table
+  height: 100%
+  width: 100%
+
+.slider-text-middle
+  display: table-cell
+  vertical-align: middle
+
+.slider-typography
+  width: 100%
+  height: 100%
+  position: absolute
+  right: 0
+  left: 0
+
+.slider-text-bottom
+  display: table-cell
+  vertical-align: bottom
+
+.slider-text-top
+  display: table-cell
+  vertical-align: top
+
+.down-section
+  position: absolute
+  width: 100%
+  bottom: 50px
+  left: 0
+  right: 0
+
+.blog-slider .swiper-slide .slider-typography
+  padding: 60px
+
+.iphone-theme
+  @media screen and (max-width: $iphone)
+    position: absolute
+    top: 42%
+    left: 0
+    z-index: 1
